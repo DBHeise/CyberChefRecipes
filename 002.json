@@ -1,0 +1,7 @@
+{
+    "author": "CrazyDave",
+    "createdOn": "2019-01-18T00:00:00.000Z",
+    "name": "Trickbot VBS Decoder1",
+    "description": "Decodes parts of a Trickbot VB script",
+    "recipe": [{"op":"Split","args":["%u",""]},{"op":"From Hex","args":["Auto"]},{"op":"Swap endianness","args":["Raw",2,true]}]
+}
