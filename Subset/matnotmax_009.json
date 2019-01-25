@@ -1,0 +1,5 @@
+{
+    "name": "Reverse strings, character substitution, from base64",
+    "url": "https://github.com/mattnotmax/cyber-chef-recipes#scenario-9---reverse-strings-character-substitution-from-base64",
+    "recipe":[{"op":"Reverse","args":["Character"]},{"op":"Find / Replace","args":[{"option":"Regex","string":"%"},"A",true,false,true,false]},{"op":"Find / Replace","args":[{"option":"Regex","string":"×"},"T",true,false,false,false]},{"op":"Find / Replace","args":[{"option":"Simple string","string":"÷"},"V",true,false,false,false]},{"op":"From Base64","args":["A-Za-z0-9+/=",true]},{"op":"To Hexdump","args":[16,false,false]}]
+}

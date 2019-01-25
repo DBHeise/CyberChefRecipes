@@ -1,0 +1,5 @@
+{
+    "name": "Extract hexadecimal, convert to hexdump for embedded PE file",
+    "url": "https://github.com/mattnotmax/cyber-chef-recipes#scenario-8---extract-hexadecimal-convert-to-hexdump-for-embedded-pe-file",
+    "recipe":[{"op":"Regular expression","args":["User defined","[a-fA-F0-9]{200,}",true,true,false,false,false,false,"List matches"]},{"op":"From Hex","args":["Auto"]},{"op":"To Hexdump","args":[16,false,false]}]
+}

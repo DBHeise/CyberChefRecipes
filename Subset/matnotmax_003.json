@@ -1,0 +1,5 @@
+{
+    "name": "From CharCode",
+    "url": "https://github.com/mattnotmax/cyber-chef-recipes#scenario-3---from-charcode",
+    "recipe":[{"op":"Regular expression","args":["User defined","([0-9]{2,3}(,\\s|))+",true,true,false,false,false,false,"List matches"]},{"op":"From Charcode","args":["Comma",10]},{"op":"Regular expression","args":["User defined","([0-9]{2,3}(,\\s|))+",true,true,false,false,false,false,"List matches"]},{"op":"From Charcode","args":["Space",10]}]
+}

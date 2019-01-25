@@ -1,0 +1,5 @@
+{
+    "name": "Group Policy Preference passwords",
+    "url": "https://github.com/mattnotmax/cyber-chef-recipes#scenario-4---group-policy-preference-passwords",
+    "recipe":[{"op":"From Base64","args":["A-Za-z0-9+/=",true]},{"op":"To Hex","args":["None"]},{"op":"AES Decrypt","args":[{"option":"Hex","string":"4e9906e8fcb66cc9faf49310620ffee8f496e806cc057990209b09a433b66c1b"},{"option":"Hex","string":""},"CBC","Hex","Raw",{"option":"Hex","string":""}]},{"op":"Decode text","args":["UTF16LE (1200)"]}]
+}

@@ -1,0 +1,5 @@
+{
+    "name": "Invoke-Obfuscation",
+    "url": "https://github.com/mattnotmax/cyber-chef-recipes#scenario-2---invoke-obfuscation",
+    "recipe":[{"op":"Find / Replace","args":[{"option":"Regex","string":"\\^|\\\\|-|_|\\/|\\s"},"",true,false,true,false]},{"op":"Reverse","args":["Character"]},{"op":"Generic Code Beautify","args":[]},{"op":"Find / Replace","args":[{"option":"Simple string","string":"http:"},"http://",true,false,true,false]},{"op":"Extract URLs","args":[false]},{"op":"Defang URL","args":[true,true,true,"Valid domains and full URLs"]}]
+}
