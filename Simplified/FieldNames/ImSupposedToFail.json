@@ -1,7 +1,6 @@
 {
     "recipe": [
-        {"op":"From Hex","args":["Space"]},
-        {"op":"Regular expression","args":["User defined","\\nHost: (.*[^\\n])",true,true,false,false,false,false,"List capture groups"]}
+        {"op":"AES Decrypt","args":[{"option":"UTF8","string":"0123456789ABCDEF"},{"option":"Hex","string":"FEDCBA"},"ECB","Hex","Raw",{"option":"Hex","string":""}]}
     ],
     "name": "test error thingy",
     "meta": {
