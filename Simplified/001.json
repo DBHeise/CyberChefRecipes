@@ -1,7 +1,7 @@
 {
     "author": "CrazyDave",
     "createdOn": "2019-01-18T00:00:00.000Z",
-    "name": "Powershell Decode Encoded Command",
+    "name": "Powershell Decode Encoded Commandv2",
     "description": "Base64 Decoding of Powershell Encoded commands",
     "recipe": [{"op":"From Base64", "args": ["A-Za-z0-9+/=",true]}, {"op":"Decode text", "args":["UTF16LE (1200)"]}]
 }
