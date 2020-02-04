@@ -6,5 +6,9 @@
     "recipe": [{"op":"Regular expression","args":["User defined","(http|ftp|https)://([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?",true,true,false,false,false,false,"List matches"]}],
     "meta": {
         "type":"url"
+    },
+    "verify": {
+        "originalInput" : "<p>\t\"We were tired of getting these e-mails from these conference people, so we thought it would be fun to write software that generates meaningless research papers and submit them,\" said Stribling. All three of the students are doing research in the <a href=\"http:\/\/www.pdos.lcs.mit.edu\/\">Parallel and Distributed Operating Systems Group<\/a> at the Computer Science and Artificial Intelligence Lab at MIT. <\/p>",
+        "expectedOutput": "http:&#x2F;&#x2F;www.pdos.lcs.mit.edu&#x2F;"
     }
 }

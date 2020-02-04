@@ -7,6 +7,9 @@
     "meta": {
         "type":"email",
         "fieldname": "EMail"
+    },
+    "verify": {
+        "originalInput" : "this is a simple (foo@bar.com) test",
+        "expectedOutput": "foo@bar.com"
     }
-
 }
