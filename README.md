@@ -8,8 +8,7 @@ Many of the recipies are test recipies for testing [CyberSaucier](https://github
 
 * real - acutal cyberChef recipes that I use
 * Simplified - simple recipies, probably too simple for use
-** FieldNames - recipies using the "fieldname" feature
-* Subset - a subset of recipies (taken from [MattNotMax](https://github.com/mattnotmax/cyber-chef-recipe))
+* Subset - a subset of recipies (taken from [MattNotMax](https://github.com/mattnotmax/cyberchef-recipes))
 
 
 ----
