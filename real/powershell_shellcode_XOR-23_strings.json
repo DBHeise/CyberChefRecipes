@@ -1,0 +1,17 @@
+{
+    "recipe":[
+        {"op":"Regular expression","args":["User defined","FromBase64String\\([\\\"']?([^\\\"']+)?['\\\"]?\\)",true,true,false,false,false,false,"List capture groups"]},
+        {"op":"From Base64","args":["A-Za-z0-9+/=",true]},
+        {"op":"Gunzip","args":[]},
+        {"op":"Regular expression","args":["User defined","FromBase64String\\([\\\"']?([^\\\"']+)?['\\\"]?\\)",true,true,false,false,false,false,"List capture groups"]},
+        {"op":"From Base64","args":["A-Za-z0-9+/=",true]},
+        {"op":"XOR","args":[{"option":"Hex","string":"23"},"Standard",false]},
+        {"op":"Strings","args":["Single byte",6,"Null-terminated strings (A)",false]}
+    ],
+    "name": "powershell_shellcode_XOR-23_strings",
+    "meta": {
+        "author": "CrazyDave",
+        "date": "2020-02-10T21:15:19.236Z",
+        "description": "pulls strings from embedded shellcode from a base64 xor encoded blob inside a gzip base64 blob"       
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "recipe": [
+        {"op":"Regular expression","args":["User defined","FromBase64String\\([\\\"']?([^\\\"']+)?['\\\"]?\\)",true,true,false,false,false,false,"List capture groups"]},
+        {"op":"From Base64","args":["A-Za-z0-9+/=",true]},
+        {"op":"Gunzip","args":[]},
+        {"op":"Regular expression","args":["User defined","FromBase64String\\([\\\"']?([^\\\"']+)?['\\\"]?\\)",true,true,false,false,false,false,"List capture groups"]},
+        {"op":"From Base64","args":["A-Za-z0-9+/=",true]},
+        {"op":"Extract IP addresses","args":[true,false,false,false]}
+    ],
+    "name": "powershell_shellcode_IPAddress",
+    "meta": {
+        "author": "CrazyDave",
+        "date": "2020-02-11T21:07:45.550Z",
+        "description": "Extracts IP Addresses from shellcode embedded in powershell"
+    }
+}

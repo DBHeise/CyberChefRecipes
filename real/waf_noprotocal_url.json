@@ -1,0 +1,15 @@
+{
+    "recipe": [
+        {"op":"From Base64","args":["A-Za-z0-9+/=",true]},
+        {"op":"Regular expression","args":["User defined","//([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?",true,true,false,false,false,false,"List matches"]}],
+    "name": "No protocal Url Extractor",
+    "meta": {
+        "author": "David B Heise",
+        "date": "2021-10-22T14:58:07.656Z",
+        "description": "Extracts a URL when no protocal is given"
+    },
+    "verify": {
+        "originalInput": "J1xcJ1xcXCJcIj5cXD5cXDwvc2NyaXB0PjxzY3JpcHQvc3JjPScvL3hmLmNtMi5wVz85MTEmcHJvdGVjdC5heWNvLmNvbSZob3JkZS11bmF1dGhlbnRpY2F0ZWQnPjwvc2NyaXB0PiIK",
+        "expectedOutput": "//xf.cm2.pW?911&protect.ayco.com&horde-unauthenticated"
+    }
+}
